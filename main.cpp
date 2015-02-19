@@ -29,8 +29,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    AboutDialog w;
-    w.show();
+    AboutDialog().exec();
 
     return a.exec();
 }
