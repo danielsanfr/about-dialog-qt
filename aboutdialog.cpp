@@ -68,7 +68,7 @@ AboutDialog::AboutDialog(QWidget *parent) :
     ui->setupUi(this);
 
     ui->lblVersion->setText("0.1.0");
-    ui->lblDescription->setText("");
+    ui->lblDescription->setText("A copy of Gnome default About dialog, made in Qt.");
 
     QPixmap pixmap(":/about.png");
     ui->lblLogo->setPixmap(pixmap.scaled(128, 128));
@@ -84,11 +84,6 @@ AboutDialog::AboutDialog(QWidget *parent) :
     ui->lblCopying->setText(QString("Copyright (c) 2015 %1").arg("Daniel San"));
 
     ui->txtBws->setVisible(false);
-
-    connect(ui->btnCredits, &QPushButton::clicked,
-            this, &AboutDialog::onCreditsOrLicenceChecked);
-    connect(ui->btnLicense, &QPushButton::clicked,
-            this, &AboutDialog::onCreditsOrLicenceChecked);
 }
 
 AboutDialog::~AboutDialog()
